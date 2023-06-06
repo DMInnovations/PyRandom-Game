@@ -12,6 +12,12 @@ while guessed == False:
     
   elif guess < num:
     int(input("Less.\n"))
+
+  elif guess >= num - 10:
+    int(input("Warmer.\n"))
+
+  elif guess <= num + 10:
+    int(input("Warmer.\n"))
     
   else:
     print("You win!!!")
