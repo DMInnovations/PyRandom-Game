@@ -15,3 +15,4 @@ while guessed == False:
     
   else:
     print("You win!!!")
+    guessed = True
