@@ -1,24 +1,30 @@
 import random
 
-num = random.randint(1, 1000000000000000000)
+run = True
 
-guess = int(input("Guess the number!!!\n"))
+while run:
+  guess = int(input("Guess the number:\n"))
+  min, max = 1, 500
+  num = random.randint(min, max)
+  
+  guessing = True
+  
+  while guessing:
+    if guess == num:
+      print("You win!")
+      guessing = False
+      
+    elif guess < int(num - 20):
+      guess = int(input("Colder\n"))
 
-guessed = False
+    elif guess > int(num + 20):
+      guess = int(input("Warmer\n"))
 
-while guessed == False:
-  if guess > num:
-    int(input("Greater.\n"))
-    
-  elif guess < num:
-    int(input("Less.\n"))
+    elif guess > int(num - 20) or guess < int(num + 20):
+      guess = int(input("Hot!\n"))
 
-  elif guess >= num - 10:
-    int(input("Warmer.\n"))
+    elif guess == max:
+      guess = int(input("Max number\n"))
 
-  elif guess <= num + 10:
-    int(input("Warmer.\n"))
-    
-  else:
-    print("You win!!!")
-    guessed = True
+    else:
+      guess = int(input("TOO HIGH\n"))
