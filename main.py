@@ -1,5 +1,6 @@
-import random
+# Created by: DMInnovations
 
+import random
 
 run = True
 
