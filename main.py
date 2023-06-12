@@ -6,8 +6,7 @@ run = True
 
 while run:
   guess = int(input("Guess the number:\n"))
-  min, max = 1, 500
-  num = random.randint(min, max)
+  num = random.randint(1, 500)
 
   guessing = True
 
@@ -25,8 +24,5 @@ while run:
     elif guess > int(num - 20) or guess < int(num + 20):
       guess = int(input("Hot!\n"))
 
-    elif guess == max:
-      guess = int(input("Max number\n"))
-
     else:
-      guess = int(input("TOO HIGH\n"))
+      guess = int(input("Keep trying\n"))
